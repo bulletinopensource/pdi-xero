@@ -18,7 +18,7 @@ Xero is a cloud-based accounting service.  You can find out more about Xero [her
 
 ## Overview
 
-PDI processes typically consist of "jobs" and "transforms".  A "job" may has a number of "transforms" and a "transform" has a number of interconnected "steps" that operate on streams of data.  This software is a "step" that supports extracting data from the Xero cloud-based accounting service into the PDI environment so that it can be stored for some other use such as reporting.
+PDI processes typically consist of "jobs" and "transforms".  A "job" may have a number of "transforms" and a "transform" has a number of interconnected "steps" that operate on streams of data.  This software is a "step" that supports extracting data from the Xero cloud-based accounting service into the PDI environment so that it can be stored for some other use such as reporting.
 
 ### Fetching XML from Xero
 
@@ -62,8 +62,8 @@ The step has a handful of configurations;
 |Stream XML Field Name|This is the field name into which the XML chunks are added to the stream|
 |Xero URL|The URL to communicate with Xero on|
 |Consumer Key|This is the key used to identify your account with Xero|
-|Key File|This is a path to the key file that is used to authenticate your account with Xero - _see below_|
-|Container Elements|_See above_|
+|Key File|This is a path to the key file that is used to authenticate your account with Xero - _see "Key File" section below_|
+|Container Elements|_See "Container Elements and Breaking-up The XML for the Stream" section above_|
 |If-Modified-Since Date|This is a string of the form ```YYYY-MM-dd HH:mm:ss``` in the local PDI time-zone.|
 |Where|The where clause to use.  This will be added to the Xero API URL and will be URL encoded automatically.|
 
