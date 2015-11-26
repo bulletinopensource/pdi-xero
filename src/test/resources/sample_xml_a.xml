@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+This is an example file for testing chunking.
+-->
+
+<Response>
+    <Artists>
+        <Artist>
+            <Name>Len Lye</Name>
+            <Genres>
+                <Genre>Kinetic Sculpture</Genre>
+                <Genre>Poetry</Genre>
+                <Genre>Film</Genre>
+            </Genres>
+        </Artist>
+        <Artist>
+            <!-- Some Random Comment -->
+            <Name>Alexander Caulder</Name>
+            <Genres>
+                <Genre>Sculpture</Genre>
+            </Genres>
+        </Artist>
+        <Artist>
+            <Name>Marc Chagall</Name>
+            <Genres>
+                <Genre>Painting</Genre>
+            </Genres>
+        </Artist>
+    </Artists>
+
+</Response>
