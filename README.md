@@ -1,10 +1,18 @@
 #pdi-xero
 
-This is a PDI step plugin for extracting data from Xero accounting.
+This is a PDI step plugin for extracting data from [Xero](http://www.xero.com) accounting.
 
 ## License
 
 See the LICENSE.TXT file for license rights and limitations.
+
+## Binary Installation
+
+A binary of version 1.0.5 can be downloaded from [here](https://pdi-xero.s3.amazonaws.com/pdi-xero-marketplace-1.0.5.zip) (SHA1 ```8792c1d528c7ea400b8387b9a6385fdd54f6a2a3```).  Copy this to the ```.../plugins/steps``` directory in your PDI (5.2) installation and then restart PDI.  Upon restart you should be able to find the _pdi-xero_ step installed.  The _pdi-xero_ step has a name "Xero GET" and an icon;
+
+![Icon](src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
+
+Se below for instructions on building and installing from source.
 
 ## Glossary
 
@@ -41,7 +49,7 @@ ETL processes will often want to "continuously update" from a source to keep a d
 
 The Xero API supports a "[where](http://developer.xero.com/documentation/getting-started/http-requests-and-responses/)" query parameter that provides the ability to filter the result set.  The _pdi-xero_ step supports this.
 
-## Building and Installing
+## Source Build and Installation
 
 The project is managed and built with [Apache Maven](https://maven.apache.org/).  Building the plugin requires Java 1.6 or better.  To build the project, from the top-level of the project;
 
