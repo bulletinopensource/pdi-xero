@@ -10,7 +10,8 @@
 
     <version>1.0.5-SNAPSHOT</version>
     <groupId>net.bulletin</groupId>
-    <artifactId>pdi-xero</artifactId>
+    <artifactId>pdi-xero-reactor</artifactId>
+    <packaging>pom</packaging>
 
     <licenses>
         <license>
@@ -32,125 +33,9 @@
         </developer>
     </developers>
 
-    <properties>
-        <pdi.version>5.2.1.0-148</pdi.version>
-        <oauth.version>20100527</oauth.version>
-    </properties>
-
-    <repositories>
-        <repository>
-            <id>pentaho-repo</id>
-            <url>http://repo.pentaho.org/artifactory/repo</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-
-        <!-- PDI -->
-        <dependency>
-            <groupId>pentaho-kettle</groupId>
-            <artifactId>kettle-core</artifactId>
-            <version>${pdi.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>pentaho-kettle</groupId>
-            <artifactId>kettle-engine</artifactId>
-            <version>${pdi.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>pentaho-kettle</groupId>
-            <artifactId>kettle-ui-swt</artifactId>
-            <version>${pdi.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- XML PROCESSING -->
-        <dependency>
-            <groupId>org.apache.xmlbeans</groupId>
-            <artifactId>xmlbeans</artifactId>
-            <version>2.4.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>stax</groupId>
-                    <artifactId>stax-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <!-- XERO O-AUTH -->
-        <dependency>
-            <groupId>net.oauth.core</groupId>
-            <artifactId>oauth</artifactId>
-            <version>${oauth.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.oauth.core</groupId>
-            <artifactId>oauth-consumer</artifactId>
-            <version>${oauth.version}</version>
-        </dependency>
-
-        <!-- TESTING -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
-
-    <build>
-
-        <plugins>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <inherited>true</inherited>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.1</version>
-                <configuration>
-                    <filters>
-                        <filter>
-                            <artifact>org.apache.xmlbeans:xmlbeans</artifact>
-                            <includes>
-                                <include>org/apache/xmlbeans/impl/common/XmlReaderToWriter*</include>
-                            </includes>
-                        </filter>
-                    </filters>
-                    <relocations>
-                        <relocation>
-                            <pattern>net.oauth</pattern>
-                            <shadedPattern>shaded.net.oauth</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.apache.xmlbeans</pattern>
-                            <shadedPattern>shaded.org.apache.xmlbeans</shadedPattern>
-                        </relocation>
-                    </relocations>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
-    </build>
+    <modules>
+        <module>pdi-xero-step</module>
+        <module>pdi-xero-marketplace</module>
+    </modules>
 
 </project>

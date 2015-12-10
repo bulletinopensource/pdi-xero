@@ -1,0 +1,7 @@
+Apache XML Beans (version ${xmlbeans.version})
+    https://xmlbeans.apache.org/
+    Apache License 2.0
+
+net.oauth.core:oauth (version ${oauth.version})
+    https://code.google.com/p/oauth/
+    Apache License 2.0

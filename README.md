@@ -49,9 +49,15 @@ The project is managed and built with [Apache Maven](https://maven.apache.org/).
 mvn package
 ```
 
-This will produce a file such as ```pdi-xero-X.Y.Z.jar```.  Copy this to the ```.../plugins/steps``` directory in your PDI (5.2) installation and then restart PDI.  Upon restart you should be able to find the _pdi-xero_ step installed.  The _pdi-xero_ step has a name "Xero GET" and an icon;
+### Step Build Product
+
+This will produce a file such as ```pdi-xero-step-X.Y.Z.jar``` in the ```pdi-xero-step``` module.  Copy this to the ```.../plugins/steps``` directory in your PDI (5.2) installation and then restart PDI.  Upon restart you should be able to find the _pdi-xero_ step installed.  The _pdi-xero_ step has a name "Xero GET" and an icon;
 
 ![Icon](src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
+
+### Marketplace Build Product
+
+The module ```pdi-xero-marketplace``` module will produce a build product that can be vended in the Pentaho marketplace.
 
 ## Configuration
 
