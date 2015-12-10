@@ -10,7 +10,7 @@ See the LICENSE.TXT file for license rights and limitations.
 
 A binary of version 1.0.5 can be downloaded from [here](https://pdi-xero.s3.amazonaws.com/pdi-xero-marketplace-1.0.5.zip) (SHA1 ```8792c1d528c7ea400b8387b9a6385fdd54f6a2a3```).  Copy this to the ```.../plugins/steps``` directory in your PDI (5.2) installation and then restart PDI.  Upon restart you should be able to find the _pdi-xero_ step installed.  The _pdi-xero_ step has a name "Xero GET" and an icon;
 
-![Icon](src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
+![Icon](pdi-xero-step/src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
 
 Se below for instructions on building and installing from source.
 
@@ -61,7 +61,7 @@ mvn package
 
 This will produce a file such as ```pdi-xero-step-X.Y.Z.jar``` in the ```pdi-xero-step``` module.  Copy this to the ```.../plugins/steps``` directory in your PDI (5.2) installation and then restart PDI.  Upon restart you should be able to find the _pdi-xero_ step installed.  The _pdi-xero_ step has a name "Xero GET" and an icon;
 
-![Icon](src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
+![Icon](pdi-xero-step/src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
 
 ### Marketplace Build Product
 
