@@ -34,6 +34,7 @@
     </developers>
 
     <modules>
+        <module>pdi-xero-parent</module>
         <module>pdi-xero-step</module>
         <module>pdi-xero-marketplace</module>
     </modules>
