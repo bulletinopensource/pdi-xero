@@ -8,7 +8,7 @@
         service in order to extract data from it and use that data in PDI transforms.
     </description>
 
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
     <groupId>net.bulletin</groupId>
     <artifactId>pdi-xero-reactor</artifactId>
     <packaging>pom</packaging>
