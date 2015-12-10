@@ -68,12 +68,24 @@ def setversion(version):
         sys.exit(1)
 
 
-def gitadd():
-    if 0 == subprocess.call(["git", "add", "pom.xml"]):
-        print("git add pom.xml")
+def gitaddpom(file):
+    if 0 == subprocess.call(["git", "add", file]):
+        print("git add " + file)
     else:
-        print("unable to git add pom.xml")
+        print("unable to git add " + file)
         sys.exit(1)
+
+# Goes through all of the pom files and adds them into the commit.
+
+def gitaddpoms(dir):
+    for f in os.listdir(dir):
+        path = os.path.join(dir, f)
+
+        if os.path.isdir(path) and not f.startswith('.'):
+            gitaddpoms(path)
+        else:
+            if f == 'pom.xml':
+                gitaddpom(path)
 
 
 def gitcommit(version):
@@ -100,11 +112,11 @@ nextversionsnapshot = initialversionmatch.group(1) + '.' + initialversionmatch.g
 print("initial / current / next; " + initialversionmatch.group(0) + ", " + currentversion + ", " + nextversionsnapshot)
 
 setversion(currentversion)
-gitadd()
+gitaddpoms('.')
 gitcommit(currentversion)
 gittag(currentversion)
 setversion(nextversionsnapshot)
-gitadd()
+gitaddpoms('.')
 gitcommit(nextversionsnapshot)
 
 print "---------------"
