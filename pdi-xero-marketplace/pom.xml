@@ -6,7 +6,7 @@
     <parent>
         <groupId>net.bulletin</groupId>
         <artifactId>pdi-xero-parent</artifactId>
-        <version>1.0.5-SNAPSHOT</version>
+        <version>1.0.5</version>
         <relativePath>../pdi-xero-parent/pom.xml</relativePath>
     </parent>
 
