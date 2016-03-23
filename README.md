@@ -12,7 +12,7 @@ A binary of version 1.0.5 can be downloaded from [here](https://pdi-xero.s3.amaz
 
 ![Icon](pdi-xero-step/src/main/resources/net/bulletin/pdi/xero/step/resources/icon.svg)
 
-Se below for instructions on building and installing from source.
+See below for instructions on building and installing from source.
 
 ## Glossary
 
@@ -112,6 +112,7 @@ abcdefhjklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123
 
 ## Useful Links
 
+* [Marketplace Spotlight article](http://pedroalves-bi.blogspot.co.nz/2016/03/marketplace-spotlight-pdi-xero-plugin.html)
 * [PDI Source](https://github.com/pentaho/pentaho-kettle)
 * [Extending Pentaho Data Integration](http://infocenter.pentaho.com/help/index.jsp?topic=%2Fcat_dev_guides%2Ftop_dev_guides.html)
 * [Pentaho plugin sample code](https://github.com/pentaho/pdi-sdk-plugins)
