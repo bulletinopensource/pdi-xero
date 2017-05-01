@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <pdi.version>5.2.1.0-148</pdi.version>
+        <pdi.version>5.4.1.8-209</pdi.version>
         <oauth.version>20100527</oauth.version>
         <xmlbeans.version>2.4.0</xmlbeans.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
